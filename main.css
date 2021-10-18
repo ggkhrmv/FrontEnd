@@ -1,0 +1,79 @@
+body {
+    font-family: "Source Code Pro", serif;
+    background-color: #121212;
+    color: white;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding-bottom: 30px;
+}
+
+.footer-links {
+    margin: 10px 10px 0;
+    padding: 20px 20px 0;
+}
+
+.footer-links li {
+    float: left;
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-links li:nth-child(5) {
+    float: right;
+    margin-right: 0;
+}
+
+
+header {
+    background-color: #FF8811;
+    padding: 5px 0 5px 0;
+    width: 100%;
+    align-content: center;
+}
+
+header h1 {
+    padding-left: 30px;
+}
+
+header img {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    object-position: top;
+    float: right;
+    margin: 10px 30px 10px 0;
+}
+
+h2 {
+    color: #FF8811;
+    margin-bottom: 30px;
+}
+
+.mark1 {
+    color: #FF8811;
+}
+
+.mark2 {
+    color: #349AD5;
+}
+
+article {
+    margin: 10px;
+    padding: 10px 20px 2.5rem;
+}
+
+
+
+
+
+
+
