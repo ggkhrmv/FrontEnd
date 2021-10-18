@@ -71,9 +71,13 @@ article {
     padding: 10px 20px 2.5rem;
 }
 
+#userIn {
+    background-color: #121212;
+    border: none;
+    color: white;
+    font-size: medium;
+}
 
-
-
-
-
-
+#userIn:focus {
+    outline: none;
+}
