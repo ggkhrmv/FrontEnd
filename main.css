@@ -1,10 +1,18 @@
 body {
-    font-family: "Source Code Pro", serif;
+    font-family: "Source Code Pro", sans-serif;
     background-color: #121212;
     color: white;
     position: relative;
     min-height: 100vh;
     margin: 0;
+}
+
+a:link {
+    color: #FF8811;
+}
+
+a:visited {
+    color: #04E762;
 }
 
 footer {
@@ -81,3 +89,86 @@ article {
 #userIn:focus {
     outline: none;
 }
+
+.playAgain {
+    border: none;
+    background-color: #FF8811;
+    padding: 20px;
+    color: white;
+    font-family: "Source Code Pro", sans-serif;
+    margin-bottom: 150px;
+    margin-top: 20px;
+}
+
+.pAgain {
+    display: flex;
+    justify-content: center;
+}
+
+.startGame {
+    border: none;
+    background-color: #FF8811;
+    padding: 30px;
+    color: white;
+    font-family: "Source Code Pro", sans-serif;
+    margin-bottom: 150px;
+}
+
+.startG {
+    display: flex;
+    justify-content: center;
+}
+
+
+.score {
+    color: #FF8811;
+}
+
+.game {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game img {
+    margin: 2px;
+    height: 150px;
+    width: 100px;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-color: white;
+}
+
+.game img.flip {
+    transform: rotateY(180deg);
+    object-fit: contain;
+}
+
+.guessed {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.guessed img {
+    margin: 2px;
+    height: 150px;
+    width: 100px;
+    object-fit: contain;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-color: white;
+}
+
+.messages {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20px;
+    column-gap: 20px;
+    row-gap: 15px;
+    justify-self: center;
+}
+

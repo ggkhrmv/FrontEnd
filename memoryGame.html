@@ -2,30 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>g_khromov</title>
-    <meta name="description" content="Personal Page">
+    <title>memoryGame</title>
+    <meta name="description" content="memory game">
     <meta name="author" content="Georgy Khromov">
     <link rel="stylesheet" href="main.css">
-
 </head>
 <body>
 <header>
-    <img src="profilePic.png" alt="me">
-    <h1>g_khromov</h1>
+    <a href="g_khromov.html"><img src="profilePic.png" alt="me"></a>
+    <h1>memoryGame</h1>
 </header>
 
 <article>
-
-    <p>hi, i'm a dual student @ <span class="mark1">Accenture</span> and the creative/founder behind <span
-            class="mark2">vivid*</span>.<br>
-        i study business informatics @ <span class="mark1">DHGE</span>.<br>
-        i'm passionate about <span class="mark1">programming</span> and <span class="mark2">fashion</span>.</p>
-    <p>you may be interested to check out these:
-        <a href="memoryGame.html">memory game</a> & <a href="mathQuiz.html">math quiz</a></p>
-
-
+    <div class="startG">
+        <button class="startGame">START THE GAME</button>
+    </div>
+    <div class="game">
+    </div>
+    <div class="messages" style="display: none">
+        <p>score: <span class="score">0</span></p>
+        <p id="message">Click on a card to flip!</p>
+        <p>matching cards: </p>
+    </div>
+    <div class="guessed">
+    </div>
+    <div class="pAgain" style="display: none">
+        <button class="playAgain">play again</button>
+    </div>
 </article>
-
 <footer>
     <ul class="footer-links">
         <li>find me on:</li>
@@ -39,8 +43,6 @@
         <li>&copy; georgy khromov, 2021</li>
     </ul>
 </footer>
-
-<script src="utils.js"></script>
-<script src="main.js"></script>
+<script src="mmryGm.js"></script>
 </body>
 </html>
