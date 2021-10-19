@@ -12,7 +12,7 @@
 <p>g_khromov Personal Page [v1.0.0]</br>
     (c) vivid*, 2021. All rights reserved.</p>
 <p>C:\Users\gkhromov\frontEndExercise><span id="input"></span></br>
-    <span id="cmdOutput"></span><input type=”text” id="userIn"></p>
+    <span id="cmdOutput"></span></p>
 <script>
     new TypeIt("#input", {
         strings: "g_khromov.html",
@@ -33,14 +33,15 @@
         .type("'g_khromov.html' ready to be initialized</br>")
         .type("Do you wish to initialize the website?(y/n)>")
         .go();
+
     window.onkeyup = keyup;
     var inputTextValue;
 
     function keyup(e) {
         inputTextValue = e.target.value;
-        if (e.keyCode === 13 && inputTextValue === "y") {
+        if (e.keyCode === 89) {
             window.location = "g_khromov.html";
-        } else if (e.keyCode === 13 && inputTextValue === "n") {
+        } else if (e.keyCode === 78) {
             window.close();
         }
     }
