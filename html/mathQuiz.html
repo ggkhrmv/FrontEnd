@@ -6,12 +6,32 @@
     <meta name="description" content="math quiz">
     <meta name="author" content="Georgy Khromov">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <header>
     <a href="g_khromov.html"><img src="../img/socials/profilePic.png" alt="me"></a>
     <h1>mathQuiz</h1>
 </header>
+
+<div class ="container">
+    <div class="instruction">
+        <h3>select the math question!</h3>
+        <p>score: <span class="score">0</span></p>
+    </div>
+    <ul class="selectionButtons">
+        <li><button type="button" class="selB" name="sub">subtraction</button></li>
+        <li><button type="button" class="selB" name="add">addition</button></li>
+        <li><button type="button" class="selB" name="multi">multiplication</button></li>
+    </ul>
+    <p id="question"></p>
+    <input type="text" id="ansQ" name="ansQ" placeholder="your answer...">
+    <p id="feedback"></p>
+    <div class="pAgain" style="display: none">
+        <button class="playAgain">next question</button>
+    </div>
+
+</div>
 
 <footer>
     <ul class="footer-links">
@@ -26,5 +46,6 @@
         <li>&copy; georgy khromov, 2021</li>
     </ul>
 </footer>
+<script src="../js/mathQuizJS.js"></script>
 </body>
 </html>

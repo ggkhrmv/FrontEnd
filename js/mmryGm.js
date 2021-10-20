@@ -1,12 +1,12 @@
 let cards = [
-    {name: "vivid", img: "vividIGlogoSmaller.png",},
-    {name: "vivid", img: "vividIGlogoSmaller.png",},
-    {name: "html", img: "html.png",},
-    {name: "html", img: "html.png",},
-    {name: "soundcloud", img: "soundcloud.png",},
-    {name: "soundcloud", img: "soundcloud.png",},
-    {name: "github", img: "github.png",},
-    {name: "github", img: "github.png",},
+    {name: "vivid", img: "../img/memoryGame/vividIGlogoSmaller.png",},
+    {name: "vivid", img: "../img/memoryGame/vividIGlogoSmaller.png",},
+    {name: "html", img: "../img/memoryGame/html.png",},
+    {name: "html", img: "../img/memoryGame/html.png",},
+    {name: "soundcloud", img: "../img/memoryGame/soundcloud.png",},
+    {name: "soundcloud", img: "../img/memoryGame/soundcloud.png",},
+    {name: "github", img: "../img/memoryGame/github.png",},
+    {name: "github", img: "../img/memoryGame/github.png",},
 ];
 
 let messages = document.querySelector(".messages");
@@ -37,7 +37,7 @@ startB.addEventListener("click", function () {
 function createBoard(board, array) {
     array.forEach((arr, index) => {
         let img = document.createElement("img");
-        img.setAttribute("src", "WALLPAPER04.png");
+        img.setAttribute("src", "../img/memoryGame/WALLPAPER04.png");
         img.setAttribute("data-id", index);
         board.appendChild(img);
     })
@@ -79,8 +79,8 @@ function checkForMatch() {
         imgs[secondCard].style.visibility = "hidden";
         setTimeout(checkWon, 500)
     } else {
-        imgs[firstCard].setAttribute("src", "WALLPAPER04.png");
-        imgs[secondCard].setAttribute("src", "WALLPAPER04.png");
+        imgs[firstCard].setAttribute("src", "../img/memoryGame/WALLPAPER04.png");
+        imgs[secondCard].setAttribute("src", "../img/memoryGame/WALLPAPER04.png");
         document.getElementById("message").textContent = "wrong, please try again!";
         document.getElementById("message").style.color = "#BA274A";
         imgs[firstCard].classList.remove("flip");

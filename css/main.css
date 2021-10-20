@@ -79,14 +79,47 @@ article {
     padding: 10px 20px 2.5rem;
 }
 
-#userIn {
-    background-color: #121212;
+.container {
+    margin: 10px;
+    padding: 10px 20px 2.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.selectionButtons {
+    list-style: none;
+}
+
+.selB {
+    border: none;
+    background-color: #FF8811;
+    padding: 20px;
+    color: white;
+    font-family: "Source Code Pro", sans-serif;
+    width: 100%;
+    margin: 20px auto;
+}
+
+#question {
+    visibility: hidden;
+}
+
+#feedback {
+    visibility: hidden;
+}
+
+#ansQ{
+    background-color: #282828;
     border: none;
     color: white;
     font-size: medium;
+    font-family: "Source Code Pro", sans-serif;
+    visibility: hidden;
 }
 
-#userIn:focus {
+#ansQ:focus {
     outline: none;
 }
 
@@ -151,6 +184,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .guessed img {
