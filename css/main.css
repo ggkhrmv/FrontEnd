@@ -110,7 +110,7 @@ article {
     visibility: hidden;
 }
 
-#ansQ{
+#ansQ {
     background-color: #282828;
     border: none;
     color: white;
@@ -206,3 +206,100 @@ article {
     justify-self: center;
 }
 
+.containerCS {
+    display:grid;
+
+    grid-template-columns: [start] 6fr [line2] 1fr [end];
+    margin: 10px;
+    padding: 10px 20px 2.5rem;
+}
+
+#table {
+    margin-right: 20px;
+    grid-column-start: start;
+    grid-column-end: line2;
+    display: grid;
+    grid-template-columns:[first] 1fr [line2] 5fr [end];
+    grid-column-gap: 0;
+    grid-template-rows: [row1] 1fr [row2] 13fr [row3];
+    grid-row-gap: 0;
+    text-align: center;
+    grid-template-areas:
+    "weekdays weekdays"
+    "time content";
+}
+
+#weekday {
+    grid-area: weekdays;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+#weekday p {
+    border-bottom-style: solid;
+    border-bottom-color: #121212;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-color: #121212;
+    border-right-width: 1px;
+    padding: 10px;
+    margin:0;
+    background-color: #FF8811;
+}
+
+#time {
+    grid-area: time;
+    display: grid;
+    grid-template-rows: repeat(14,1fr);
+}
+
+#time p {
+    border-bottom-style: solid;
+    border-bottom-color: #121212;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-color: #121212;
+    border-right-width: 1px;
+    padding: 10px;
+    margin:0;
+    background-color: #349AD5;
+}
+
+#content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: repeat(14,1fr);
+    grid-template-columns: repeat(5,1fr);
+}
+
+#content p {
+    border-bottom-style: solid;
+    border-bottom-color: #121212;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-right-color: #121212;
+    border-right-width: 1px;
+    background-color: #282828;
+    padding: 10px;
+    margin:0;
+}
+
+
+#containerBoxes {
+    grid-column-start: line2;
+    grid-column-end: end;
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-areas:
+    "weekdays"
+    "time";
+}
+
+#containerBoxes p {
+    border-bottom-style: solid;
+    border-bottom-color: #121212;
+    border-bottom-width: 1px;
+    padding: 10px;
+    margin:0;
+    background-color: #FF8811;
+}
