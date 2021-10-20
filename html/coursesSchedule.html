@@ -6,6 +6,7 @@
     <meta name="description" content="Courses Schedule">
     <meta name="author" content="Georgy Khromov">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <header>
@@ -39,93 +40,37 @@
             <p></p>
         </div>
         <div id="content">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
         </div>
     </div>
     <div id="containerBoxes">
-        <p>INF - Grundl.</br>
-            H-Saal, Herr Dorendorf</p>
-        <p>PRO - Materialwirtsch</br>
-            E318, Herr Lerm</p>
-        <p>ABW - EinfuerhungABWL</br>
-            E324, Herr Antes</p>
-        <p>KAT - wissenschaftArb</br>
-            E114, Herr Matschinske</p>
-        <p>INF - EinfProgrammie</br>
-            R11, Herr Grimm</p>
-        <p>MAR - WirtschMathe</br>
-            Online, Herr Feldmann</p>
+        <p id="desc">COURSES: </p>
+        <div id="infG">
+           INF - Grundl.</br>
+                H-Saal, Herr Dorendorf
+        </div>
+        <div id="pro">
+           PRO - Materialwirtsch</br>
+                E318, Herr Lerm
+        </div>
+        <div id="abw">
+            ABW - EinfuerhungABWL</br>
+                E324, Herr Antes
+        </div>
+        <div id="kat">
+           KAT - wissenschaftArb</br>
+                E114, Herr Matschinske
+        </div>
+        <div id="infE">
+            INF - EinfProgrammie</br>
+                R11, Herr Grimm
+        </div>
+        <div id="mar">
+            MAR - WirtschMathe</br>
+                Online, Herr Feldmann
+        </div>
     </div>
 </div>
+<div id="snackbar">Some text some message..</div>
 <footer>
     <ul class="footer-links">
         <li>find me on:</li>
@@ -141,5 +86,6 @@
         <li>&copy; georgy khromov, 2021</li>
     </ul>
 </footer>
+<script src="../js/coursesScheduler.js"></script>
 </body>
 </html>

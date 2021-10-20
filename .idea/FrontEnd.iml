@@ -11,5 +11,6 @@
     <orderEntry type="library" name="typeit" level="application" />
     <orderEntry type="library" name="@types/jquery" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>
