@@ -49,9 +49,7 @@ $(document).ready(function () {
                             $(this).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 1) + ";'></p>");
                             $(this).after("<p class='1' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; background-color: #BA274A;'>" + course + "</p>");
                             $(this).remove();
-                            let obj1 = $("#snackbar").text("Course has been added to schedule! \n" +
-                                "Click on the scheduled course again to delete it.");
-                            obj1.html(obj1.html().replace(/\n/g, '<br/>'));
+                            $("#snackbar").text("Course has been added to schedule!");
                             notification();
                             break;
                         case "3":
@@ -81,9 +79,7 @@ $(document).ready(function () {
                             $(this).before("<p class='2' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + lengthc22 + "; background-color: #BA274A;'>" + course + "</p>");
                             $(this.nextSibling).remove();
                             $(this).remove();
-                            let obj = $("#snackbar").text("Course has been added to schedule! \n" +
-                                "Click on the scheduled course again to delete it.");
-                            obj.html(obj.html().replace(/\n/g, '<br/>'));
+                            $("#snackbar").text("Course has been added to schedule!");
                             notification();
                             break;
                         case "3":
@@ -93,21 +89,30 @@ $(document).ready(function () {
                             $(this).before("<p class='2' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length2 + "; background-color: #BA274A;'>" + course + "</p>");
                             $(this.nextSibling).remove();
                             $(this).remove();
-                            let obj1 = $("#snackbar").text("Course has been added to schedule! \n" +
-                                "Click on the scheduled course again to delete it.");
-                            obj1.html(obj1.html().replace(/\n/g, '<br/>'));
+                            $("#snackbar").text("Course has been added to schedule!");
                             notification();
                             break;
                         default:
                             if
                             ($(this.nextSibling).css("grid-column-start") == $(this).css("grid-column-start")) {
                                 let length2 = Number(rowPos) + courseLength;
-                                $(this).before("<p class='2' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length2 + "; background-color: #BA274A;'>" + course + "</p>");
-                                $(this.nextSibling).remove();
-                                $(this).remove();
-                                let obj = $("#snackbar").text("Course has been added to schedule! \n" +
-                                    "Click on the scheduled course again to delete it.");
-                                obj.html(obj.html().replace(/\n/g, '<br/>'));
+                                if ($(this.nextSibling).attr("class") == "2") {
+                                    $(this).before("<p class='2' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length2 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 2) + ";'></p>");
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                } else if ($(this.nextSibling).attr("class") == "3") {
+                                    $(this).before("<p class='2' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length2 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 2) + ";'></p>");
+                                    $(this.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 3) + ";'></p>");
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                } else {
+                                    $(this).before("<p class='2' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length2 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                }
+                                $("#snackbar").text("Course has been added to schedule!");
                                 notification();
                                 break;
                             } else {
@@ -128,9 +133,7 @@ $(document).ready(function () {
                                 (this.nextSibling.nextSibling).remove();
                                 $(this.nextSibling).remove();
                                 $(this).remove();
-                                let obj = $("#snackbar").text("Course has been added to schedule! \n" +
-                                    "Click on the scheduled course again to delete it.");
-                                obj.html(obj.html().replace(/\n/g, '<br/>'));
+                                $("#snackbar").text("Course has been added to schedule!");
                                 notification();
                                 break;
                             } else {
@@ -141,27 +144,55 @@ $(document).ready(function () {
                         case "3":
                             let lengthc33 = Number(rowPos) + courseLength;
                             $(this).before("<p class='3' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + lengthc33 + "; background-color: #BA274A;'>" + course + "</p>");
-                            $(this).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 3) + ";'></p>");
                             $(this).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 4) + ";'></p>");
+                            $(this).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 3) + ";'></p>");
                             (this.nextSibling.nextSibling).remove();
                             $(this.nextSibling).remove();
                             $(this).remove();
-                            let obj = $("#snackbar").text("Course has been added to schedule! \n" +
-                                "Click on the scheduled course again to delete it.");
-                            obj.html(obj.html().replace(/\n/g, '<br/>'));
+                            $("#snackbar").text("Course has been added to schedule!");
                             notification();
                             break;
                         default:
                             if
                             ($(this.nextSibling.nextSibling).css("grid-column-start") == $(this).css("grid-column-start")) {
-                                let length3 = Number(rowPos) + courseLength;
-                                $(this).before("<p class='3' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length3 + "; background-color: #BA274A;'>" + course + "</p>");
-                                $(this.nextSibling.nextSibling).remove();
-                                $(this.nextSibling).remove();
-                                $(this).remove();
-                                let obj = $("#snackbar").text("Course has been added to schedule! \n" +
-                                    "Click on the scheduled course again to delete it.");
-                                obj.html(obj.html().replace(/\n/g, '<br/>'));
+                                if ($(this.nextSibling).attr("class") == "2") {
+                                    let length3 = Number(rowPos) + courseLength;
+                                    $(this).before("<p class='3' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length3 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 3) + ";'></p>");
+                                    $(this.nextSibling.nextSibling).remove();
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                } else if ($(this.nextSibling).attr("class") == "3") {
+                                    let length3 = Number(rowPos) + courseLength;
+                                    $(this).before("<p class='3' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length3 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 4) + ";'></p>");
+                                    $(this.nextSibling.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 3) + ";'></p>");
+                                    $(this.nextSibling.nextSibling).remove();
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                } else if ($(this.nextSibling.nextSibling).attr("class") == "2") {
+                                    let length3 = Number(rowPos) + courseLength;
+                                    $(this).before("<p class='3' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length3 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 3) + ";'></p>");
+                                    $(this.nextSibling.nextSibling).remove();
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                } else if ($(this.nextSibling.nextSibling).attr("class") == "3") {
+                                    let length3 = Number(rowPos) + courseLength;
+                                    $(this).before("<p class='3' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length3 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 4) + ";'></p>");
+                                    $(this.nextSibling.nextSibling).after("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 3) + ";'></p>");
+                                    $(this.nextSibling.nextSibling).remove();
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                } else {
+                                    let length3 = Number(rowPos) + courseLength;
+                                    $(this).before("<p class='3' style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + "; grid-row-end:" + length3 + "; background-color: #BA274A;'>" + course + "</p>");
+                                    $(this.nextSibling.nextSibling).remove();
+                                    $(this.nextSibling).remove();
+                                    $(this).remove();
+                                }
+                                $("#snackbar").text("Course has been added to schedule!");
                                 notification();
                                 break;
                             } else {
@@ -184,37 +215,10 @@ $(document).ready(function () {
             $("#containerBoxes div").siblings().css("visibility", "visible");
             courseLength = 0;
             course = " ";
-            $("p[class]").click(function () {
-                let rowPos = $(this).css("grid-row-start");
-                let colPos = $(this).css("grid-column-start");
-                switch ($(this).attr("class")) {
-                    case "1":
-                        $(this).before("<p style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + ";'></p>");
-                        $(this).remove();
-                        $("#snackbar").text("Course has been deleted from the schedule!");
-                        notification();
-                        break;
-                    case "2":
-                        $(this).before("<p style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + ";'></p>");
-                        $(this).before("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 1) + ";'></p>");
-                        $(this).remove();
-                        $("#snackbar").text("Course has been deleted from the schedule!");
-                        notification();
-                        break;
-                    case "3":
-                        $(this).before("<p style='grid-column-start:" + colPos + "; grid-row-start:" + rowPos + ";'></p>");
-                        $(this).before("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 1) + ";'></p>");
-                        $(this).before("<p style='grid-column-start:" + colPos + "; grid-row-start:" + (Number(rowPos) + 2) + ";'></p>");
-                        $(this).remove();
-                        $("#snackbar").text("Course has been deleted from the schedule!");
-                        notification();
-                        break;
-                }
-            });
+
         });
 
 
     });
-
 
 });
